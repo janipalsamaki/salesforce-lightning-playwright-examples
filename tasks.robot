@@ -14,23 +14,23 @@ ${DEMO_APP_URL}=    https://lwc-recipes-oss.herokuapp.com
 Interact with input fields
     Open Browser    ${DEMO_APP_URL}
     Type Text
-    ...    css=recipe-hello-expressions >> ui-input:nth-child(1) input
+    ...    css=recipe-hello-expressions ui-input:nth-child(1) input
     ...    First name
     Type Text
-    ...    css=recipe-hello-expressions >> ui-input:nth-child(2) input
+    ...    css=recipe-hello-expressions ui-input:nth-child(2) input
     ...    Last name
     Take Screenshot
-    ...    selector=css=recipe-hello-expressions >> ui-card >> .card-body
+    ...    selector=css=recipe-hello-expressions ui-card .card-body
 
 *** Tasks ***
 Interact with dynamic elements
     Open Browser    ${DEMO_APP_URL}/#composition
     Type Text
-    ...    css=recipe-composition-contact-search >> input[type="search"]
+    ...    css=recipe-composition-contact-search input[type="search"]
     ...    Amy
     ${search_result_locator}=
     ...    Set Variable
-    ...    css=recipe-composition-contact-search >> recipe-contact-tile
+    ...    css=recipe-composition-contact-search recipe-contact-tile
     Wait For Elements State
     ...    ${search_result_locator}
     ...    visible
