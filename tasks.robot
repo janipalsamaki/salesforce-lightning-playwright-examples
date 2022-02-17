@@ -21,7 +21,6 @@ Interact with input fields
     Take Screenshot
     ...    selector=css=recipe-hello-expressions ui-card .card-body
 
-*** Tasks ***
 Interact with dynamic elements
     Open Browser    ${DEMO_APP_URL}/#composition
     Type Text
