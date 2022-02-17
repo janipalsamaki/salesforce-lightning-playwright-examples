@@ -3,7 +3,6 @@ Documentation     Salesforce Lightning uses a lot of shadow DOMs.
 ...               Playwright expressions can access the shadow DOMs.
 ...               Here's examples of interacting with various elements.
 ...               Visible browser is enabled for demo purposes.
-...               The presenter mode is enabled for demo purposes.
 ...               SelectorsHub works well for finding the initial locators.
 Library           RPA.Browser.Playwright
 
