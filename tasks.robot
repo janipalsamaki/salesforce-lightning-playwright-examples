@@ -5,7 +5,7 @@ Documentation     Salesforce Lightning uses a lot of shadow DOMs.
 ...               Visible browser is enabled for demo purposes.
 ...               The presenter mode is enabled for demo purposes.
 ...               SelectorsHub works well for finding the initial locators.
-Library           RPA.Browser.Playwright    enable_presenter_mode=True
+Library           RPA.Browser.Playwright
 
 *** Variables ***
 ${DEMO_APP_URL}=    https://lwc-recipes-oss.herokuapp.com
