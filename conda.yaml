@@ -6,7 +6,7 @@ dependencies:
   - pip=20.1
   - nodejs=16.13.2
   - pip:
-      - robotframework-browser==11.4.0
-      - rpaframework==12.8.0
+      - robotframework-browser==12.2.0
+      - rpaframework==12.9.0
 rccPostInstall:
   - rfbrowser init
