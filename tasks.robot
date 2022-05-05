@@ -1,17 +1,21 @@
 *** Settings ***
-Documentation     Salesforce Lightning uses a lot of shadow DOMs.
-...               Playwright can access the shadow DOMs.
-...               Here's examples of interacting with various elements.
-...               Visible browser is enabled for demo purposes.
-...               SelectorsHub works well for finding the initial locators.
-Library           RPA.Browser.Playwright
+Documentation       Salesforce Lightning uses a lot of shadow DOMs.
+...                 Playwright can access the shadow DOMs.
+...                 Here's examples of interacting with various elements.
+...                 Visible browser is enabled for demo purposes.
+...                 SelectorsHub works well for finding the initial locators.
+
+Library             RPA.Browser.Playwright
+
 
 *** Variables ***
 ${DEMO_APP_URL}=    https://lwc-recipes-oss.herokuapp.com
 
+
 *** Tasks ***
 Interact with input fields
-    Open Browser    ${DEMO_APP_URL}
+    New Browser    headless=False
+    New Page    ${DEMO_APP_URL}
     Type Text
     ...    css=recipe-hello-expressions ui-input:nth-child(1) input
     ...    First name
@@ -22,7 +26,8 @@ Interact with input fields
     ...    selector=css=recipe-hello-expressions ui-card .card-body
 
 Interact with dynamic elements
-    Open Browser    ${DEMO_APP_URL}/#composition
+    New Browser    headless=False
+    New Page    ${DEMO_APP_URL}/#composition
     Type Text
     ...    css=recipe-composition-contact-search input[type="search"]
     ...    Amy
